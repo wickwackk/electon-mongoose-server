@@ -18,6 +18,7 @@ product_router.get("/product", async (req, res) => {
 product_router.post("/product", upload.single("file"), async (req, res) => {
   console.log(req.file);
   const { secure_url } = await uploadCloud.uploader.upload(req.file.path, {
+    public_id: req.file.originalname,
     folder: "product",
     use_file: true,
   });

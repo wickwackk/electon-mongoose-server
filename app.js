@@ -14,6 +14,7 @@ app.use(express.json());
 app.use(cors());
 
 app.use(product_router);
+// app.use(cate_router);
 
 // const res = cloudinary.uploader.upload("/Users/morning/Downloads/andy.jpeg", {
 //   public_id: "hey2",
