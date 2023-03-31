@@ -19,7 +19,7 @@ user_router.post("/user", upload.single("file"), async (req, res) => {
   console.log(req.file);
   const { secure_url } = await uploadCloud.uploader.upload(req.file.path, {
     public_id: req.file.originalname,
-    folder: "product",
+    folder: "users",
     use_file: true,
   });
 
